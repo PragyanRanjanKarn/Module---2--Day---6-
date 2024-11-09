@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Validation</h1>
+    <form name = "f1" onsubmit="val()">
+        Name: <input type="text" name="n"><br><br>
+        <input type="Submit">
+        <p id="i1"></p>
+
+        <script>
+            function val() {
+                var x = document.forms["f1"]["n"].value;
+                if(x==""){
+                    alert("Name must be filled..")
+                    return false;
+                }
+            }
+        </script>
+    </form>
+</body>
+</html>
