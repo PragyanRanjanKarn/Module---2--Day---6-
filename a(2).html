@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Validation</h1>
+
+    <p>Enter a Number & Click Ok:</p>
+    <input type="number" min="100" max="1000" id="i1" required>
+    <button onclick="f1()">OK</button>
+    <p>Number should be between 100 - 1000</p>
+    <p id="i2"></p>
+    <script>
+        function f1() {
+            var x = document.getElementById("i1");//x = input
+            if (!x.checkValidity()) {
+                document.getElementById("i2").innerHTML = x.validationMessage;
+            }
+            else {
+                document.getElementById("i2").innerHTML = "Input OK";
+            }
+        }
+    </script>
+</body>
+
+</html>
